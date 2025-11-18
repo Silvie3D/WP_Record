@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Styles</title>
+    <style>
+        .internal { color: blue; background: lightblue; }
+        .box-internal { border: 2px solid black; padding: 10px; margin: 10px; border-radius: 10px;}
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <body>
+        <h1>CSS Demo</h1>
+        <div style="border: 2px solid black; padding: 10px; margin: 10px; border-radius: 10px;">
+            <p style="color: red; background: lightyellow;">Inline CSS</p>
+            <p style="color: red; background: lightyellow;">Styles applied directly to the element using style attribute.</p>
+        </div>
+        <div class="box-internal">
+            <p class="internal">Internal CSS</p>
+            <p class="internal">Styles defined in &lt;style&gt; tag within the HTML head section.</p>
+        </div>
+        <div class="box-external">
+            <p class="external">External CSS</p>
+            <p class="external">Styles defined in a separate .css file and linked using &lt;link&gt; tag.</p>
+        </div>
+    </body>
+</html>
