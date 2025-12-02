@@ -1,0 +1,17 @@
+<html>
+<body>
+    <img id="img"  src="./assets/bulboff.png" alt="">
+    <h2 id="hover">Point Mouse here to light me.</h2>
+    <script>
+        document.getElementById('hover').addEventListener('mouseenter',()=>{
+            document.getElementById('img').src="./assets/bulbon.png"
+            document.getElementById('hover').innerHTML="Remove Mouse from here to Turn me off."
+        })
+        document.getElementById('hover').addEventListener('mouseleave',()=>{
+            document.getElementById('img').src="./assets/bulboff.png"
+            document.getElementById('hover').innerHTML="Point Mouse here to Turn me on."
+        })
+        
+    </script>    
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+<html lang="en">
+  <body>
+    <h2>1.Find the length of the sentence</h2>
+    <input type="text" id="input1" />
+    <input type="submit" id="submit1" value="Submit" />
+    <h4 id="ans1">ans</h4>
+    <h2>2.Convert to Upper Case.</h2>
+    <input type="text" id="input2" />
+    <input type="submit" id="submit2" value="Submit" />
+    <h4 id="ans2">ans</h4>
+    <h2>3.Check the whether it includes the given string.</h2>
+    <input type="text" id="input3" />
+    <h3>The word to that might contains.</h3>
+    <input type="text" id="input4"  /> 
+    <input
+      type="submit"
+      id="submit3"
+      value="Submit"
+    />
+    <h4 id="ans3">ans</h4>
+
+    <script>
+        document.getElementById("submit1").addEventListener('click',(e)=>{
+            e.preventDefault()
+            let string=document.getElementById('input1').value
+            document.getElementById('ans1').innerHTML=`The length is :${string.length}`
+        })
+
+         document.getElementById("submit2").addEventListener('click',(e)=>{
+            e.preventDefault()
+            let string=document.getElementById('input2').value
+            document.getElementById('ans2').innerHTML=`The captialised answer  is :${string.toUpperCase()}`
+        })
+
+
+         document.getElementById("submit3").addEventListener('click',(e)=>{
+            e.preventDefault()
+            let string=document.getElementById('input3').value
+            let includes=document.getElementById('input4').value
+            let ans=string.includes(includes)
+            
+            document.getElementById('ans3').innerHTML=` ${ans ? "Yes it contains": "no , it doesn't contains"} `
+        })
+         
+        
+
+        
+    </script>
+  </body>
+</html>

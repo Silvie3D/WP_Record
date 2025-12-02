@@ -1,0 +1,63 @@
+<html>
+
+<body style="display: flex; justify-content: space-around;">
+    <form name="examForm" action="" id="submit">
+        <label for="username">Enter name:</label>
+        <input type="text" name="username" id="user_name"><br><br>
+        <label for="birth_date">Enter the birth date</label>
+        <input type="text" name="birth_date" id="user_birth"><br><br>
+        <label for="register_num">Enter the register number:</label>
+        <input type="text" id="register_num" name="register_num"><br><br>
+        <h4>Q1.full form of html</h4>
+        <input type="radio" name="q1" value="Hyper text markup link">a.Hyper text markup link <br> <br>
+        <input type="radio" name="q1" value="Hyper text main language">b.Hyper text main language <br><br>
+        <input type="radio" name="q1" value="Hyper text markup language">c.Hyper text markup language <br><br>
+        <input type="radio" name="q1" value="Hyper text multiple link">d.Hyper text multiple link <br><br>
+        <h4>Q2.1Byte is = ?</h4>
+        <input type="radio" name="q2" value="16 bits">a.16 bits <br> <br>
+        <input type="radio" name="q2" value="8 bits">b.8 bits <br><br>
+        <input type="radio" name="q2" value="10 bits">c.10 bits <br><br>
+        <input type="radio" name="q2" value="32 bits">d.32 bits<br><br>
+        <h4>Q3.Select the input device</h4>
+        <input type="radio" name="q3" value="keyboard">a.keyboard <br> <br>
+        <input type="radio" name="q3" value="printer">b.printer <br><br>
+        <input type="radio" name="q3" value="monitor">c.monitor <br><br>
+        <input type="radio" name="q3" value="speaker">d.speaker <br><br>
+        <h4>Q4.C is invented by</h4>
+        <input type="radio" name="q4" value="Rasmus ledrof">a.Rasmus ledrof <br> <br>
+        <input type="radio" name="q4" value="Alan turing">b. <br><br>
+        <input type="radio" name="q4" value="Dennis Richie">c. <br><br>
+        <input type="radio" name="q4" value="James gosling">d. <br><br>
+        <h4>Q5.Select non linear data structure</h4>
+        <input type="radio" name="q5" value="stack ">a.<br> <br>
+        <input type="radio" name="q5" value="queue">b.queue <br><br>
+        <input type="radio" name="q5" value="Array">c.Array <br><br>
+        <input type="radio" name="q5" value="Tree">d.Tree <br><br>
+        <input type="submit" value="submit">
+
+    </form>
+
+    <div>
+      <p id="q1"></p>
+      <p id="q2"></p>
+      <p id="q3"></p>
+      <p id="q4"></p>
+      <p id="q5"></p>
+    </div>
+
+    <script>
+        document.getElementById('submit').addEventListener('submit', (e) => {
+            e.preventDefault()
+            
+            document.getElementById('q1').innerHTML=`Q1.${document.forms['examForm']['q1'].value}`
+            document.getElementById('q2').innerHTML=`Q2.${document.forms['examForm']['q2'].value}`
+            document.getElementById('q3').innerHTML=`Q3.${document.forms['examForm']['q3'].value}`
+            document.getElementById('q4').innerHTML=`Q4.${document.forms['examForm']['q4'].value}`
+            document.getElementById('q5').innerHTML=`Q5.${document.forms['examForm']['q5'].value}`
+
+
+        })
+    </script>
+</body>
+
+</html>

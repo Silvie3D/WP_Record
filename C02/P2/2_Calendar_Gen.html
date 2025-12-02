@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Calendar</title>
+</head>
+
+<body>
+    <center>
+        <h2>Calendar Generator</h2>
+        <input type="number" id="year" placeholder="Enter Year">
+        <button onclick="generate()">Generate</button>
+        <br><br>
+        <div id="result"></div>
+    </center>
+
+    <script>
+        function generate() {
+            let year = document.getElementById("year").value;
+            let div = document.getElementById("result");
+            div.innerHTML = "";
+
+            let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+            for (let i = 0; i < 12; i++) {
+                let date = new Date(year, i, 1);
+                let table = "<table border='1' width='200'><tr><th colspan='7'>" + months[i] + "</th></tr>";
+                table += "<tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr><tr>";
+
+                // Empty cells
+                for (let j = 0; j < date.getDay(); j++) {
+                    table += "<td></td>";
+                }
+
+                // Days
+                while (date.getMonth() === i) {
+                    table += "<td>" + date.getDate() + "</td>";
+                    if (date.getDay() === 6) {
+                        table += "</tr><tr>";
+                    }
+                    date.setDate(date.getDate() + 1);
+                }
+
+                table += "</tr></table><br>";
+                div.innerHTML += table;
+            }
+        }
+    </script>
+</body>
+
+</html>

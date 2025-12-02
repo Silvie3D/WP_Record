@@ -1,0 +1,43 @@
+
+<html>
+  <body>
+    <div style="display: flex; justify-content: center; align-items: center">
+      <form action="" id="user_submit">
+        <h2>Registration Form</h2>
+        <label for="user_name">Enter the Name:</label>
+        <input type="text" name="name" id="user_name" /><br /><br />
+        <label for="email">Enter the Email</label>
+        <input type="email" id="user_email" name="email" /><br /><br />
+        <label for="password">Enter the Password:</label>
+        <input type="password" id="user_password" name="password" /><br /><br />
+        <label for="password">Confirm the Password:</label>
+        <input
+          type="password"
+          id="confirm_password"
+          name="password"
+        /><br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <script>
+      document.getElementById("user_submit").addEventListener("submit", (e) => {
+        e.preventDefault();
+        let user_name = document.getElementById("user_name").value;
+        let user_email = document.getElementById("user_email").value;
+        let user_password = document.getElementById("user_password").value;
+        let confirm_password =
+          document.getElementById("confirm_password").value;
+        if (user_name == "") {
+          alert("Please enter your name");
+        } else if (user_email == "") {
+          alert("Please enter your email");
+        } else if (user_password == "") {
+          alert("Please enter your password");
+        } else if (user_password != confirm_password) {
+          alert("The password does not match");
+        }
+      });
+    </script>
+  </body>
+</html>

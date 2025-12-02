@@ -1,0 +1,12 @@
+
+<html>
+<body class="body">
+    <input type="text" id="color"> <input type="submit" id="submit" value="change">
+    <script>
+     document.getElementById('submit').addEventListener('click',(e)=>{
+        let colour=document.getElementById('color').value
+        document.querySelector('.body').style.backgroundColor=colour
+     })
+    </script>
+</body>
+</html>
