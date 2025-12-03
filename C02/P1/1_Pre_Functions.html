@@ -13,15 +13,14 @@
     <p id="mathOutput"></p>
 
     <script>
-        // STRING FUNCTIONS
+
         let text = "Hello World";
 
-        let length = text.length;            // Gives length
-        let upper = text.toUpperCase();      // Converts to uppercase
-        let lower = text.toLowerCase();      // Converts to lowercase
-        let sub = text.substring(0, 5);      // Extracts part of string
+        let length = text.length;            
+        let upper = text.toUpperCase();      
+        let lower = text.toLowerCase();      
+        let sub = text.substring(0, 5);      
 
-        // Displaying String Output
         document.getElementById("strOutput").innerHTML =
             "Original: " + text + "<br>" +
             "Length: " + length + "<br>" +
@@ -30,15 +29,15 @@
             "Substring(0,5): " + sub;
 
 
-        // MATH FUNCTIONS
+
         let num = 25;
 
-        let squareRoot = Math.sqrt(num);     // Square root
-        let power = Math.pow(2, 3);          // 2^3
-        let random = Math.random();          // Random number
-        let round = Math.round(4.7);         // Round to nearest integer
+        let squareRoot = Math.sqrt(num);     
+        let power = Math.pow(2, 3);          
+        let random = Math.random();          
+        let round = Math.round(4.7);         
 
-        // Displaying Math Output
+
         document.getElementById("mathOutput").innerHTML =
             "Square root of 25: " + squareRoot + "<br>" +
             "2 raised to 3: " + power + "<br>" +
