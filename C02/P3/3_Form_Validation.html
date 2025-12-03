@@ -1,43 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
-  <body>
-    <div style="display: flex; justify-content: center; align-items: center">
-      <form action="" id="user_submit">
-        <h2>Registration Form</h2>
-        <label for="user_name">Enter the Name:</label>
-        <input type="text" name="name" id="user_name" /><br /><br />
-        <label for="email">Enter the Email</label>
-        <input type="email" id="user_email" name="email" /><br /><br />
-        <label for="password">Enter the Password:</label>
-        <input type="password" id="user_password" name="password" /><br /><br />
-        <label for="password">Confirm the Password:</label>
-        <input
-          type="password"
-          id="confirm_password"
-          name="password"
-        /><br /><br />
-        <input type="submit" value="Submit" />
-      </form>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+</head>
 
-    <script>
-      document.getElementById("user_submit").addEventListener("submit", (e) => {
-        e.preventDefault();
-        let user_name = document.getElementById("user_name").value;
-        let user_email = document.getElementById("user_email").value;
-        let user_password = document.getElementById("user_password").value;
-        let confirm_password =
-          document.getElementById("confirm_password").value;
-        if (user_name == "") {
-          alert("Please enter your name");
-        } else if (user_email == "") {
-          alert("Please enter your email");
-        } else if (user_password == "") {
-          alert("Please enter your password");
-        } else if (user_password != confirm_password) {
-          alert("The password does not match");
-        }
-      });
-    </script>
-  </body>
+<body>
+  <h2>Registration Form</h2>
+  <form id="regForm" onsubmit="return validateForm()">
+    <input type="text" id="name" placeholder="Full Name"> <br>
+    <input type="email" id="email" placeholder="Email"> <br>
+    <input type="password" id="password" placeholder="Password"> <br>
+    <input type="password" id="confirm" placeholder="Confirm Password"> <br>
+    <button type="submit">Register</button>
+  </form>
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const pass = document.getElementById("password").value;
+      const confirm = document.getElementById("confirm").value;
+
+      if (!name || !email || !pass || !confirm) {
+        alert("All fields are required!");
+        return false;
+      }
+      if (pass.length < 6) {
+        alert("Password must be at least 6 characters!");
+        return false;
+      }
+      let specialCharPattern = /[@#$%^&*()+=\-!]/;
+      if (!specialCharPattern.test(pass)) {
+        alert("password should contain atleast one special character")
+        return false;
+      }
+      if (pass !== confirm) {
+        alert("Passwords do not match!");
+        return false;
+      }
+      alert("Registration successful!");
+      return true;
+    }
+  </script>
+</body>
+
 </html>

@@ -10,7 +10,7 @@
         <input type="number" id="year" placeholder="Enter Year">
         <button onclick="generate()">Generate</button>
         <br><br>
-        <div id="result"></div>
+        <div id="result" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;"></div>
     </center>
 
     <script>
@@ -23,7 +23,7 @@
 
             for (let i = 0; i < 12; i++) {
                 let date = new Date(year, i, 1);
-                let table = "<table border='1' width='200'><tr><th colspan='7'>" + months[i] + "</th></tr>";
+                let table = "<table border='1' width='200' style='border-collapse: collapse;'><tr><th colspan='7'>" + months[i] + "</th></tr>";
                 table += "<tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr><tr>";
 
                 // Empty cells
@@ -40,7 +40,7 @@
                     date.setDate(date.getDate() + 1);
                 }
 
-                table += "</tr></table><br>";
+                table += "</tr></table>";
                 div.innerHTML += table;
             }
         }

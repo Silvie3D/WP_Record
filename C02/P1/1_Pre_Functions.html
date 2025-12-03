@@ -1,32 +1,50 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    <h2>1. Length of sentence</h2>
-    <input id="i1"><button onclick="a1()">Submit</button>
-    <h4 id="o1"></h4>
+<head>
+    <title>String and Math Functions Demo</title>
+</head>
+<body>
+    <h2>JavaScript String & Math Functions</h2>
 
-    <h2>2. Uppercase</h2>
-    <input id="i2"><button onclick="a2()">Submit</button>
-    <h4 id="o2"></h4>
+    <h3>String Functions</h3>
+    <p id="strOutput"></p>
 
-    <h2>3. Includes check</h2>
-    <input id="i3">
-    <h3>Word to check</h3>
-    <input id="i4"><button onclick="a3()">Submit</button>
-    <h4 id="o3"></h4>
+    <h3>Math Functions</h3>
+    <p id="mathOutput"></p>
 
     <script>
-      const g=id=>document.getElementById(id);
+        // STRING FUNCTIONS
+        let text = "Hello World";
 
-      function a1(){ g("o1").textContent = g("i1").value.length; }
+        let length = text.length;            // Gives length
+        let upper = text.toUpperCase();      // Converts to uppercase
+        let lower = text.toLowerCase();      // Converts to lowercase
+        let sub = text.substring(0, 5);      // Extracts part of string
 
-      function a2(){ g("o2").textContent = g("i2").value.toUpperCase(); }
+        // Displaying String Output
+        document.getElementById("strOutput").innerHTML =
+            "Original: " + text + "<br>" +
+            "Length: " + length + "<br>" +
+            "Uppercase: " + upper + "<br>" +
+            "Lowercase: " + lower + "<br>" +
+            "Substring(0,5): " + sub;
 
-      function a3(){
-        g("o3").textContent =
-          g("i3").value.includes(g("i4").value)
-          ? "Yes, it contains"
-          : "No, it doesn't";
-      }
+
+        // MATH FUNCTIONS
+        let num = 25;
+
+        let squareRoot = Math.sqrt(num);     // Square root
+        let power = Math.pow(2, 3);          // 2^3
+        let random = Math.random();          // Random number
+        let round = Math.round(4.7);         // Round to nearest integer
+
+        // Displaying Math Output
+        document.getElementById("mathOutput").innerHTML =
+            "Square root of 25: " + squareRoot + "<br>" +
+            "2 raised to 3: " + power + "<br>" +
+            "Random number (0 to 1): " + random + "<br>" +
+            "Round 4.7: " + round;
     </script>
-  </body>
+
+</body>
 </html>
