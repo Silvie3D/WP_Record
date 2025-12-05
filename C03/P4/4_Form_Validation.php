@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="php4.php" method="post">
+    <form action="4_Form_Validation.php" method="post">
         <label for="name">User name</label>
         <input type="text" name="name">
         <label for="name">Email</label>
