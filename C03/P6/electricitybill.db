@@ -1,0 +1,10 @@
+CREATE DATABASE electricitydb;
+
+USE electricitydb;
+
+CREATE TABLE bills (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_name VARCHAR(100),
+    units INT,
+    amount DECIMAL(10,2)
+);
