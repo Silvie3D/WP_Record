@@ -2,14 +2,7 @@
 $players = [
     "Rohit Sharma",
     "Virat Kohli",
-    "Jasprit Bumrah",
     "KL Rahul",
-    "Shubman Gill",
-    "Hardik Pandya",
-    "Ravindra Jadeja",
-    "Mohammed Shami",
-    "Suryakumar Yadav",
-    "Rishabh Pant"
 ];
 ?>
 <!DOCTYPE html>
